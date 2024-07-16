@@ -1,0 +1,9 @@
+{
+  "action": "write",
+  "resource": "users",
+  "actor_type": "checker",
+  "client" : "FIN",
+  "roles": [
+    "ops"
+  ]
+}
