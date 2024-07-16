@@ -13,5 +13,5 @@ curl -X PUT http://localhost:8181/v1/data/fin --data-binary @data.json
 curl http://localhost:8181/v1/data/fin | jq
 
 #load policy
-curl -X PUT http://localhost:8181/v1/policies/auth/fin --data-binary @policy.rego
+curl -X PUT http://localhost:8181/v1/policies/auth/fin --data-binary @omn.rego
 ````
