@@ -15,7 +15,7 @@ allow if {
 }
 
 # Admin check
-is_admin {
+is_admin if {
     user := data[input.user]
     "admin" == user.roles[_]
 }
