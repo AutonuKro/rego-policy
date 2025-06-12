@@ -5,12 +5,17 @@ default allow := false
 # Allow if user is admin
 allow if {
     user := data.users[input.user]
-    "admin" == user.roles[_]
+    some role in user.roles
+    "admin" == user
 }
 
 # Allow if user has required permission and resource
 allow if {
     user := data.users[input.user]
-    input.permission == user.permissions[_]
-    input.resource == user.resources[_]
+
+    some permission in user.permissions
+    input.permission == permission
+
+    some resource in user.resources
+    input.resource == resource
 }
